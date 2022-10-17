@@ -4,14 +4,10 @@
 // 782 -> 8
 // 918 -> 1
 
-Console.WriteLine("Введите трехзначное число");
-int number = int.Parse(Console.ReadLine());
-int[] number = number;
-
-
-int index = 0;
-while (index < 3)
+int GetLastDigit(int number)
 {
-    Console.WriteLine(number[index]);
-    index++;
+    int lastDigit = number / 10 % 10;
+    return lastDigit;
 }
+
+System.Console.WriteLine(GetLastDigit(783));
