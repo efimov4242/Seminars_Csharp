@@ -4,10 +4,9 @@
 // 782 -> 8
 // 918 -> 1
 
-int GetLastDigit(int number)
+int GetSecondDigit(int number)
 {
-    int lastDigit = number / 10 % 10;
-    return lastDigit;
+    return number / 10 % 10;
 }
 
-System.Console.WriteLine(GetLastDigit(783));
+System.Console.WriteLine(GetSecondDigit(856));
