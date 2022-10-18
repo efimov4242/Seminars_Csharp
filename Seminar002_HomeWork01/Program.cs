@@ -9,4 +9,9 @@ int GetSecondDigit(int number)
     return number / 10 % 10;
 }
 
-System.Console.WriteLine(GetSecondDigit(856));
+System.Console.WriteLine("Введите трёхзначное число");
+int number = int.Parse(Console.ReadLine());
+System.Console.WriteLine(GetSecondDigit(number));
+
+
+

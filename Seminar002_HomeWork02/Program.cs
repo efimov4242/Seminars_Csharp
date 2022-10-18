@@ -2,11 +2,23 @@
 
 // 645 -> 5
 // 78 -> третьей цифры нет
-// 32679 -> 6
+// 32679 ->
 
-int GetLastDigit(int number)
-{
-    if(number )
-}
+Console.WriteLine("Введите число");
+int number = int.Parse(Console.ReadLine());
 
-System.Console.WriteLine(GetLastDigit(258));
+if (number < 100)
+	Console.WriteLine("Третьей цифры нет");
+int index = 100;
+if (number >= 100)
+    while (index < number)
+    {
+    number = number / 10;
+    if(number > 100 & number < 1000)
+        Console.WriteLine(number % 10);
+    index++;
+    }
+    Console.WriteLine(number % 10);
+
+
+
