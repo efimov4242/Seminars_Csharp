@@ -4,19 +4,12 @@
 // 7 -> да
 // 1 -> нет
 
-void GetWeekend(int dayNumber)
-{
-	{
-	if(dayNumber >= 1 & dayNumber <= 5)
-	System.Console.WriteLine("Нет");;
-	}
-	if(dayNumber >= 6 & dayNumber <= 7)
-	System.Console.WriteLine("Да");;
-	{
-	System.Console.WriteLine("Введите число от 1 до 7");;
-	}
-}
-
 System.Console.WriteLine("Введите цифру дня недели");
-int number = int.Parse(Console.ReadLine());
-System.Console.WriteLine(GetWeekend(number));
+int dayNumber = int.Parse(Console.ReadLine());
+
+if(dayNumber >= 1 & dayNumber <= 5)
+	System.Console.WriteLine("Нет");
+if(dayNumber >= 6 & dayNumber <= 7)
+	System.Console.WriteLine("Да");
+else
+	System.Console.WriteLine("Введите число от 1 до 7");
