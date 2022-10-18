@@ -4,6 +4,19 @@
 // 46 -> нет
 // 161 -> да
 
+<<<<<<< HEAD
+=======
+
+// void GetCheckNumber(int number)
+// {
+// 	{
+// 	if(number % 7 == 0 & number % 23 == 0)
+// 	System.Console.WriteLine("Да");
+// 	}
+// 	System.Console.WriteLine("Нет");
+// }
+
+>>>>>>> 0d5b6d2ab89ae5df8c61a5ca7245a9699421da37
 Console.WriteLine("Введите число кратное одновременно 7 и 23");
 int number = int.Parse(Console.ReadLine());
 
