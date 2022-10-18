@@ -13,3 +13,5 @@ System.Console.WriteLine("Введите трёхзначное число");
 int number = int.Parse(Console.ReadLine());
 System.Console.WriteLine(GetSecondDigit(number));
 
+
+
