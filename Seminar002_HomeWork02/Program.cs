@@ -10,11 +10,11 @@ int number = int.Parse(Console.ReadLine());
 if (number < 100)
 	Console.WriteLine("Третьей цифры нет");
 if (number >= 100 & number <= 1000)
-    Console.WriteLine(number % 10);
+	Console.WriteLine(number % 10);
 else
 {
-    int index = 100;
-    while (index < number)
+	int index = 100;
+	while (index < number)
     {
         number = number / 10;
         if(number > 100 & number < 1000)
