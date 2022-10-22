@@ -4,21 +4,34 @@
 // 78 -> третьей цифры нет
 // 32679 ->
 
-Console.WriteLine("Введите число");
-int number = int.Parse(Console.ReadLine());
+// Console.WriteLine("Введите число");
+// int number = int.Parse(Console.ReadLine());
 
-if (number < 100)
-	Console.WriteLine("Третьей цифры нет");
-if (number >= 100 & number <= 1000)
-    Console.WriteLine(number % 10);
+// if (number < 100)
+// {
+// Console.WriteLine("Третьей цифры нет");
+// }
+// else
+// {
+// while (number >= 1000)
+// {
+// number /= 10;
+// }
+// Console.WriteLine(number % 10);
+// }
+
+// Второй вариант решения через массивы
+
+Console.WriteLine("Введите число");
+string stringNumber = Console.ReadLine();
+
+if (stringNumber.Length < 3) // или stringNumber.Length < 3;
+{
+Console.WriteLine("Третьей цифры нет");
+}
 else
 {
-    int index = 100;
-    while (index < number)
-    {
-        number = number / 10;
-        if(number > 100 & number < 1000)
-            Console.WriteLine(number % 10);
-        index++;
-    }
+Console.WriteLine(stringNumber[2]);
 }
+
+
