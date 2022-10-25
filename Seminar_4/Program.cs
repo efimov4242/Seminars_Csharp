@@ -32,5 +32,19 @@ int FactorialNumber(int number)
 	return count;
 }
 
-System.Console.WriteLine(FactorialNumber(5));
+// Console.WriteLine(FactorialNumber(5));
 
+// Задача 3
+// Напишите программу, которая принимает на вход число (А) и выдает сумму чисел от 1 до А.
+
+int GetSumOneToRoundA(int number)
+{
+	int sum = 0;
+	for (int i = 0; i <= number; i++)
+	{
+		sum = i + sum;
+	}
+	return sum;
+}
+
+System.Console.WriteLine(GetSumOneToRoundA(7));
