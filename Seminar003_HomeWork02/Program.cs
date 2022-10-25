@@ -4,8 +4,8 @@
 // A (7,-5, 0); B (1,-1,9) -> 11.53
 
 void PrintDistance2D(int ax, int bx,
-						   int ay, int by,
-							int az, int bz)
+		     int ay, int by,
+		     int az, int bz)
 {
 	int aCatet = bx - ax;
 	int bCatet = ay - by;
