@@ -19,16 +19,21 @@ int h = new Random().Next(0, 100);
 
 int[] myArray = {a, b, c, d, e, f, g, h};
 
+Console.Write("[");
+
 for (int i = 0; i < myArray.Length; i++)
 {
 	Console.Write(myArray[i]);
 	if(i < myArray.Length -1)
+	{
 		for (int j = 0; j < 1; j++)
 		{
 		Console.Write(", ");
 		}
+	}
 }
-}
+Console.Write("]");
 Console.WriteLine();
+}
 
 Array();
