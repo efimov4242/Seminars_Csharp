@@ -4,4 +4,4 @@
 
 // [-4, -6, 89, 6] -> 0
 
-
+int[] RandomNumbArray()
