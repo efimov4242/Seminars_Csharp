@@ -10,7 +10,7 @@ void PrintSumEvenNumber(int arrayLength, int minValue = 100, int maxValue = 1000
 	int result = 0;
 	for (int i = 0; i < array.Length; i++)
 	{
-		array[i] = rnd.Next(minValue, maxValue + 1);
+		array[i] = rnd.Next(minValue, maxValue);
 		if (array[i] % 2 == 0)
 			result++;
 	}
