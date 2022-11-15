@@ -24,19 +24,20 @@ void PrintRandomArray(int[] array)
 }
 
 
-void PrintSumFirstAndLastNumbers(int[] array)
+int[] GetMultiplyFirstAndLastNumbers(int[] array)
 {
-	int sum = 0;
-	for (int i = 0, j = array.Length - 1; i < array.Length/2; i++, j--)
+	for (int i = 0, j = array.Length-1; i < array.Length/2; i++, j--)
 	{
-		sum = array[i] + array[j];
-		Console.Write(sum + " ");
+		array[i] = array[i] * array[j];
 	}
+	return array;
 }
 
 
-int[] newArray = GetRandomArray(5, 1, 10);
+
+
+int[] newArray = GetRandomArray(6, 1, 10);
 PrintRandomArray(newArray);
 Console.WriteLine();
-PrintSumFirstAndLastNumbers(newArray);
-Console.WriteLine();
+int[] myArray = GetMultiplyFirstAndLastNumbers(newArray);
+Console.WriteLine(String.Join(" ", myArray));
