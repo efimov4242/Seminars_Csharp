@@ -15,5 +15,3 @@ int PrintPointOfIntersection(double b1, double k1, double b2, double k2)
 	}
 	return 0;
 }
-
-System.Console.WriteLine(PrintPointOfIntersection(10, 10, 10, 10));
