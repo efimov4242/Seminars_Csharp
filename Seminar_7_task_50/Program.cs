@@ -14,8 +14,24 @@ int IsNumberInArray(int[,] array, int number)
 		for (int j = 0; j < array.GetLength(1); j++)
 		{
 			if(array[i, j] == number)
-			break;
+			return number;
 		}
 	}
-	return number;
+	return "Такого элемента нет";
 }
+
+int[,] RandomArray(int y, int x, int minValue = 0, int maxValue = 10)
+{
+	int[,] newArray = new int[y, x];
+	var rnd = new Random();
+
+	for (int i = 0; i < newArray.GetLength(0); i++)
+	{
+		for (int j = 0; j < newArray.GetLength(1); j++)
+		{
+			newArray[i, j] = rnd.Next(minValue, maxValue + 1);
+		}
+	}
+	return newArray;
+}
+
