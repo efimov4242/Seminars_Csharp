@@ -6,19 +6,25 @@
 // 8 4 2 4
 // 17 -> такого числа в массиве нет
 
-int IsNumberInArray(int[,] array, int number)
+void IsNumberInArray(int[,] array, int m, int n)
 {
+	int number = 0;
+
+	if(n > array.GetLength(0) || m > array.GetLength(1))
+		Console.WriteLine("Такого числа в массиве нет");
 
 	for (int i = 0; i < array.GetLength(0); i++)
 	{
 		for (int j = 0; j < array.GetLength(1); j++)
 		{
-			if(array[i, j] == number)
-			return number;
+			if(array[i, j] == array[m, n])
+				number = array[m, n];
 		}
 	}
-	return "Такого элемента нет";
+	Console.WriteLine(number);
 }
+
+
 
 int[,] RandomArray(int y, int x, int minValue = 0, int maxValue = 10)
 {
@@ -29,9 +35,11 @@ int[,] RandomArray(int y, int x, int minValue = 0, int maxValue = 10)
 	{
 		for (int j = 0; j < newArray.GetLength(1); j++)
 		{
-			newArray[i, j] = rnd.Next(minValue, maxValue + 1);
+			newArray[i, j] = rnd.Next(minValue, maxValue);
 		}
 	}
 	return newArray;
 }
 
+int[,] randomArray = RandomArray(3, 4);
+IsNumberInArray(randomArray, 1, 3);
