@@ -1,0 +1,92 @@
+Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
+Например, на выходе получается вот такой массив:
+01 02 03 04
+12 13 14 05
+11 16 15 06
+10 09 08 07
+*/
+
+int[,] GetSpiralFillArray(int row = 4, int coln = 4)
+{
+    int[,] array = new int[row, coln];
+    int number = 01;
+    for (int i = 0; i < coln; i++)
+    {
+        array[0, i] = number;
+        number++;
+    }
+
+    for (int j = 1; j < row; j++)
+    {
+        array[j, coln - 1] = number;
+        number++;
+    }
+
+    for (int i = coln - 2; i >= 0; i--)
+    {
+        array[row - 1, i] = number;
+        number++;
+    }
+
+    for (int j = row - 2; j > 0; j--)
+    {
+        array[j, 0] = number;
+        number++;
+    }
+
+
+
+/*                int a = 1;
+    int b = 1;
+
+    while (number < row * coln)
+    {
+        while (array[a, b + 1] == 0)
+        {
+            array[a, b] = number;
+            number++;
+            b++;
+        }
+
+        while (array[a + 1, b] == 0)
+        {
+            array[a, b] = number;
+            number++;
+            b++;
+        }
+
+        while (array[a + 1, b - 2] == 0)
+        {
+            array[a, b] = number;
+            number++;
+            b--;
+        }
+    }
+
+    for (int j = 0; j < row; j++)
+    {
+        for (int i = 0; i < coln; i++)
+        {
+            if (array[j, i] == 0)
+            {
+                array[j, i] = number;
+                break;
+            }
+        }
+    }*/
+    return array;
+}
+
+void GetChangeString(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write(array[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+}
+
+GetChangeString(GetSpiralFillArray());
