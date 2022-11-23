@@ -1,5 +1,5 @@
-/*
-Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
+/* Задача 56: 
+Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
 
 Например, задан массив:
 1 4 7 2
@@ -13,49 +13,55 @@
 
 
 int[,] array = {
-			{0, 0, 0, 2},
-			{5, 0, 0, 3},
-			{8, 0, 1, 4},
-			{5, 2, 6, 7}
-			};
+            {1, 4, 7, 2},
+            {5, 9, 2, 3},
+            {8, 4, 2, 4},
+            {5, 2, 6, 7}
+            };
+
 
 int[] GetRowsSum(int[,] array)
 {
-	int row = array.GetLength(0);
-	int coln = array.GetLength(1);
-	int[] newArray = new int[row];
-	for (int i = 0; i < row; i++)
-	{
-		int sum = 0;
-		for (int j = 0; j < coln; j++)
-		{
-			sum += array[i, j];
-		}
-		for (int k = i; k < row; k++)
-		{
-			newArray[k] = sum;
-		}
-		sum = 0;
-	}
-	return newArray;
+    int row = array.GetLength(0);
+    int coln = array.GetLength(1);
+
+    int[] newArray = new int[row];
+
+    for (int i = 0; i < row; i++)
+    {
+        int sum = 0;
+        for (int j = 0; j < coln; j++)
+        {
+            sum += array[i, j];
+        }
+
+        for (int k = i; k < row; k++)
+        {
+            newArray[k] = sum;
+        }
+        sum = 0;
+    }
+
+    return newArray;
 }
 
 
 foreach (var item in GetRowsSum(array))
 {
-	Console.WriteLine(item);
+    Console.WriteLine(item);
 }
 
 void PrintMinNumber(int[] array)
 {
-	int min = array[0];
-	int pos = 0;
-	for (int i = 1; i < array.Length; i++)
-	{
-		if(array[i] < min)
-		pos = i;
-	}
-	Console.WriteLine(pos);
+    int min = array[0];
+    int pos = 0;
+
+    for (int i = 1; i < array.Length; i++)
+    {
+        if (array[i] < min) 
+            pos = i;
+    }
+    Console.WriteLine($"{pos + 1} строка");
 }
 
 PrintMinNumber(GetRowsSum(array));
